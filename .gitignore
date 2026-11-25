@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+cw2_samples/
+cw2_efr_samples/
+cw2_efr_regression_samples/
+*.parquet
+cw2_*_audit.csv
+cw2_*_relu.npz
+cw2_*_regressor.npz
+CW2_三维热力图.html
+*.pdf
+*.docx
+* copy.ipynb
