@@ -27,7 +27,15 @@ Gurobi 优化需要有效的 Gurobi 许可证。受限许可证可能无法求�
 
 ## 数据和可复现性
 
-大型 Parquet 样本目录、输出图、生成的权重和结果表不提交。主笔记本的采样、训练和求解单元会重新生成 `cw2_joint_samples.parquet` 和 `cw2_joint_model_audit.csv`。参考笔记本依次执行后会生成 `cw2_samples/`、`cw2_nadir_relu.npz` 和交互图。随机种子在笔记本中指定。
+大型 Parquet 样本、生成的权重和模型审计表不提交。主笔记本的采样、训练和求解单元会重新生成 `cw2_joint_samples.parquet` 和 `cw2_joint_model_audit.csv`。参考笔记本依次执行后会生成 `cw2_samples/`、`cw2_nadir_relu.npz` 和交互图。随机种子在笔记本中指定。
+
+仓库保留绘制图 11、12 及其对比图所用的小型汇总 CSV。要重新计算，请先运行主笔记本的采样单元，再从项目根目录执行：
+
+```bash
+python compare_analytic_milp.py
+python compare_analytic_strategies.py
+python figure6_animation.py
+```
 
 PDF、Word 资料不包含在仓库中。笔记本中对本地论文或题目文档的链接需要用户自行提供原文件。
 
